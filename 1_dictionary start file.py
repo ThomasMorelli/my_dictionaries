@@ -4,11 +4,16 @@ phonebook = {'Chris':'555−1111',
              'Katie':'555−2222',
              'Joanne':'555−3333'}
 
-
+'''
 
 print()
 print('*****  start section 1 - print dictionary ********')
 print()
+
+
+mydictionary = {} #this will be an empty dictionary
+
+mydictionary = dict(m=8, n=9)   #m and n are the keys and 8,9 are the balues
 
 
 
@@ -19,13 +24,21 @@ print('*****  end section 1 ********')
 print()
 
 
-'''
+
 
 
 print()
 print('*****  start section 2 - search dictionary ********')
 print()
 
+name = 'Chris'
+
+if name in phonebook:
+    print(f"NameL {name} Phone Number: {phonebook[name]}")
+else:
+    print(f"Name: {name} is not in the phonebook")
+
+    #phone = phonebook['chris']
 
 
 
@@ -46,6 +59,12 @@ print()
 print('*****  start section 3 - edit/append dictionary ********')
 print()
 
+print(phonebook)
+
+phonebook['Joe'] = '555-0123'
+phonebook['Chris'] = '555-4444'
+
+print(phonebook)
 
 
 
@@ -61,7 +80,10 @@ print()
 
 print()
 print('*****  start section 4 - delete/remove from dictionary ********')
-print()
+print(phonebook)
+
+del phonebook['Chris']
+
 
 
 
@@ -72,16 +94,18 @@ print()
 
 
 
-
+'''
 
 
 print()
 print('*****  start section 5 - iterate through keys, values, items ********')
 print()
 
+for k in phonebook:
+    print(f"The key is: {key} and the value is {phonebook[key]}")
 
-
-
+for value in phonebook.values():
+    print(value)
 
 
 print()
